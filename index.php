@@ -34,16 +34,11 @@ $quizList = $query->fetchAll(PDO::FETCH_ASSOC);
             </form>
         </div>
     </div>
-
+  
     <h2>Liste des Quiz</h2>
     <ul>
         <?php foreach ($quizList as $quizzes): ?>
-            <li><a href="quizzes.php?id=<?= $quizzes['1, 2, 3'] ?>">
-                <?php
-                $titre = isset($quizzes['titre']) ? $quizzes['titre'] : '';
-                echo htmlspecialchars($titre, ENT_QUOTES, 'UTF-8');
-                ?>
-            </a></li>
+            <li><a href="quizzes.php?id=<?= $quizzes['id'] ?>"><?= htmlspecialchars($quizzes['titre']) ?></a></li>
         <?php endforeach; ?>
     </ul>
 
