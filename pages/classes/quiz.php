@@ -1,3 +1,4 @@
+<?php
 class Quiz {
     private $pdo;
 
@@ -15,3 +16,4 @@ class Quiz {
         return $stmt->execute([$title, $userId]);
     }
 }
+?>

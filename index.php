@@ -34,7 +34,7 @@ $quizList = $query->fetchAll(PDO::FETCH_ASSOC);
             </form>
         </div>
     </div>
-
+  
     <h2>Liste des Quiz</h2>
     <ul>
         <?php foreach ($quizList as $quizzes): ?>
